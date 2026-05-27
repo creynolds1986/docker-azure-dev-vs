@@ -11,7 +11,8 @@ RUN apt-get update && apt-get install -y wget apt-transport-https software-prope
 RUN curl -sL https://aka.ms/InstallAzureCLIDeb | bash
 
 # Install Bicep CLI
-RUN az bicep install
+RUN curl -Lo /usr/local/bin/bicep https://github.com/Azure/bicep/releases/latest/download/bicep-linux-x64 && \
+    chmod +x /usr/local/bin/bicep
 
 # Install PowerShell modules
 RUN pwsh -Command "Install-Module -Name Az -Force -Scope AllUsers -AllowClobber" && \
