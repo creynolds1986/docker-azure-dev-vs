@@ -17,3 +17,7 @@ RUN curl -Lo /usr/local/bin/bicep https://github.com/Azure/bicep/releases/latest
 # Install PowerShell modules
 RUN pwsh -Command "Install-Module -Name Az -Force -Scope AllUsers -AllowClobber" && \
     pwsh -Command "Install-Module -Name Microsoft.Graph -Force -Scope AllUsers"
+
+# Configure PowerShell profile for Windows-style tab completion
+RUN mkdir -p /home/vscode/.config/powershell && \
+    echo 'Set-PSReadLineKeyHandler -Key Tab -Function Complete' >> /home/vscode/.config/powershell/Microsoft.PowerShell_profile.ps1
