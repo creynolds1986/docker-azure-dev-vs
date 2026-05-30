@@ -8,7 +8,6 @@
       "extensions": [
         "ms-vscode.powershell",
         "ms-azuretools.vscode-bicep",
-        "ms-vscode.azure-account",
         "ms-azuretools.vscode-azureresourcegroups",
         "github.copilot"
       ],
