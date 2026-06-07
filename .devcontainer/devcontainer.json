@@ -9,7 +9,8 @@
         "ms-vscode.powershell",
         "ms-azuretools.vscode-bicep",
         "ms-azuretools.vscode-azureresourcegroups",
-        "github.copilot"
+        "github.copilot",
+        "github.copilot-chat"
       ],
       "settings": {
         "terminal.integrated.defaultProfile.linux": "pwsh",
