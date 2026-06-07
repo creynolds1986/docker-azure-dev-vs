@@ -45,4 +45,4 @@ A development container for Azure infrastructure and PowerShell development with
 - Bicep
 - Azure Resource Groups
 - GitHub Copilot
-- GitHub Copilot Chat
+- GitHub Copilot Chat (built-in)
