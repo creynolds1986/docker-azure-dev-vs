@@ -9,6 +9,7 @@
       "extensions": [
         "ms-vscode.powershell",
         "ms-azuretools.vscode-bicep",
+        "HashiCorp.terraform",
         "ms-azuretools.vscode-azureresourcegroups",
         "github.copilot"
       ],

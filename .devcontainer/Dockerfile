@@ -21,3 +21,10 @@ RUN pwsh -Command "Install-Module -Name Az -Force -Scope AllUsers -AllowClobber"
 # Configure PowerShell profile for Windows-style tab completion
 RUN mkdir -p /home/vscode/.config/powershell && \
     echo 'Set-PSReadLineKeyHandler -Key Tab -Function Complete' >> /home/vscode/.config/powershell/Microsoft.PowerShell_profile.ps1
+
+# Install Terraform CLI
+RUN apt-get update && apt-get install -y gnupg lsb-release curl && \
+    curl -fsSL https://apt.releases.hashicorp.com/gpg | gpg --dearmor -o /usr/share/keyrings/hashicorp-archive-keyring.gpg && \
+    echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(lsb_release -cs) main" | tee /etc/apt/sources.list.d/hashicorp.list && \
+    apt-get update && apt-get install -y terraform && \
+    rm -rf /var/lib/apt/lists/*
