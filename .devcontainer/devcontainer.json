@@ -10,8 +10,7 @@
         "ms-vscode.powershell",
         "ms-azuretools.vscode-bicep",
         "HashiCorp.terraform",
-        "ms-azuretools.vscode-azureresourcegroups",
-        "github.copilot"
+        "ms-azuretools.vscode-azureresourcegroups"
       ],
       "settings": {
         "terminal.integrated.defaultProfile.linux": "pwsh",
